@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Móveis & Cia: encontre seu movel do sonho</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/produto.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid d-flex justify-content-start">
+          <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="container-input">
+            <input type="search" class="navbar-brand"></input>
+            <div class="icones">
+                <button id="icon-button" class="botao-cadastro"><i class="bi bi-person-fill"></i><span class="tooltip">Cadastre-se</span></button>
+                <button class="botao-carrinho"><i class="bi bi-cart2" id="cart-icon"></i></button>
+                <div class="cart">
+                    <h2 class="cart-tittle">Seu Carrinho</h2>
+                    <div class="cart-content">
+                        
+                    </div>
+                    <div class="total">
+                        <div class="total-tittle">Total</div>
+                        <div class="total-price">R$0</div>
+                    </div>
+                    <button type="button" class="btn-buy">Comprar agora</button>
+                    <i class="bi bi-x" id="close-cart"></i>
+                </div>
+            </div>
+          </div>
+          <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"><i class="bi bi-house-door-fill"><a href="../index.html"><h3 class="moveis">Móveis & Cia</h3></a></i></h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Categorias Populares</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Quarto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sala de Estar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Cozinha</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Lavanderia</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sala de Jantar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Configuracoes<i class="bi bi-chevron-right"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-pin-map"></i>Enviar Para</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-coin"></i>Moeda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-translate"></i>Idioma</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-headset"></i>Central de Ajuda</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="cadastroProduto.html"></i>Quero ser vendedor</a>
+              </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="container-produto">
+        <input class="input-invisible" type="radio" name="product" id="click-one">
+        <input class="input-invisible" type="radio" name="product" id="click-two">
+        <input class="input-invisible" type="radio" name="product" id="click-three">
+        <div class="wrapper">
+            <div class="left-container">
+                <div class="top-content">
+                    <img src="../imagens/188m (2).jpeg" alt="img-one" id="img-one">
+                    <img src="../imagens/188m (1).jpeg" alt="img-two" id="img-two">
+                    <img src="../imagens/188.jpeg" alt="img-three" id="img-three" class="card-img-top">
+                </div>
+                <div class="bottom-content">
+                    <div class="one">
+                        <label for="click-one"></label>
+                        <img src="../imagens/188m (2).jpeg" alt="img-one">
+                    </div>
+                    <div class="two">
+                        <label for="click-two"></label>
+                        <img src="../imagens/188m (1).jpeg" alt="img-two">
+                    </div>
+                    <div class="three">
+                        <label for="click-three"></label>
+                        <img src="../imagens/188.jpeg" alt="img-three" class="card-img-top">
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-container">
+                <img class="black" src="../imagens/blackfriday.png">
+                <span class="price">R$50,00</span>
+                <h4>Especificacoes</h4>
+                <p >**************************************************</p>
+                <div class="star">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <p>5.0</p>
+                    <p class="card-text">titulo-produto</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-compra">
+            <div class="card-compra">
+                <div class="card-vendedor">
+                    <a href="#" class="vendedor">
+                        <span class="negrito">Vendido por</span> (vendedor)
+                        <span class="informacoes">
+                            <h6 class="negrito">info</h6>
+                            <p>name: ****</p>
+                            <p>N da loja: ****</p>
+                            <p>Localizacao: *****</p>
+                            <p>Aberta desde: **/**/****</p>
+                        </span>
+                    </a>
+                </div>
+                <div class="card-envia">
+                    <p class="envia"><span class="negrito">Enviar para</span></p>
+                    <input class="cep" type="text" placeholder="coloque seu cep aqui">
+                    <button class="botao-busca"><i class="bi bi-search"></i></button>
+                </div>
+                <div class="resultado">
+                    <p class="frete1"><strong><i class="bi bi-truck"></i>Frete de </strong><span id="frete"></span></p><button class="maisInf"><i class="bi bi-chevron-right"></i></button></i>
+                </div>
+                <div class="CCE">
+                    <p class="infoCEP"><strong class="enviar">Enviar para</strong><span id="cep"></span>, <span id="cidade"></span>, <span id="estado"></span></p>
+                </div>
+                <div class="card-efetue">
+                    <button class="comprar"><h5>Comprar agora</h5></button>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="catalogos-produtos">
+        <nav class="container-central-catalogos">
+          <div class="card" style="width: 11.75rem; position: relative;">
+            <img src="../imagens/188.jpeg" class="card-img-top" alt="...">
+                <i class="bi bi-cart-check-fill add-cart"></i>
+            <div class="card-body">
+                <p class="card-text">Titulo-Produto</p>
+                <span class="price">R$05,99</span>
+            </div>
+          </div>
+          <div class="card" style="width: 11.75rem; position: relative;">
+            <img src="../imagens/188.jpeg" class="card-img-top" alt="...">
+                <i class="bi bi-cart-check-fill add-cart"></i>
+            <div class="card-body">
+                <p class="card-text">Titulo-Produto</p>
+                <span class="price">R$05,99</span>
+            </div>
+          </div>
+          <div class="card" style="width: 11.75rem; position: relative;">
+            <img src="../imagens/188.jpeg" class="card-img-top" alt="...">
+                <i class="bi bi-cart-check-fill add-cart"></i>
+            <div class="card-body">
+                <p class="card-text">Titulo-Produto</p>
+                <span class="price">R$05,99</span>
+            </div>
+          </div>
+          <div class="card" style="width: 11.75rem; position: relative;">
+            <img src="../imagens/188.jpeg" class="card-img-top" alt="...">
+                <i class="bi bi-cart-check-fill add-cart"></i>
+            <div class="card-body">
+                <p class="card-text">Titulo-Produto</p>
+                <span class="price">R$05,99</span>
+            </div>
+          </div>
+          <div class="card" style="width: 11.75rem; position: relative;">
+            <img src="../imagens/188.jpeg" class="card-img-top" alt="...">
+                <i class="bi bi-cart-check-fill add-cart"></i>
+            <div class="card-body">
+                <p class="card-text">Titulo-Produto</p>
+                <span class="price">R$05,99</span>
+            </div>
+          </div>
+        </nav>
+        <nav class="container-central-catalogos">
+          <div class="card" style="width: 11.75rem; position: relative;">
+            <img src="../imagens/188.jpeg" class="card-img-top" alt="...">
+                <i class="bi bi-cart-check-fill add-cart"></i>
+            <div class="card-body">
+                <p class="card-text">Titulo-Produto</p>
+                <span class="price">R$05,99</span>
+            </div>
+          </div>
+          <div class="card" style="width: 11.75rem; position: relative;">
+            <img src="../imagens/188.jpeg" class="card-img-top" alt="...">
+                <i class="bi bi-cart-check-fill add-cart"></i>
+            <div class="card-body">
+                <p class="card-text">Titulo-Produto</p>
+                <span class="price">R$05,99</span>
+            </div>
+          </div>
+          <div class="card" style="width: 11.75rem; position: relative;">
+            <img src="../imagens/188.jpeg" class="card-img-top" alt="...">
+                <i class="bi bi-cart-check-fill add-cart"></i>
+            <div class="card-body">
+                <p class="card-text">Titulo-Produto</p>
+                <span class="price">R$05,99</span>
+            </div>
+          </div>
+          <div class="card" style="width: 11.75rem; position: relative;">
+            <img src="../imagens/188.jpeg" class="card-img-top" alt="...">
+                <i class="bi bi-cart-check-fill add-cart"></i>
+            <div class="card-body">
+                <p class="card-text">Titulo-Produto</p>
+                <span class="price">R$05,99</span>
+            </div>
+          </div>
+          <div class="card" style="width: 11.75rem; position: relative;">
+            <img src="../imagens/188.jpeg" class="card-img-top" alt="...">
+                <i class="bi bi-cart-check-fill add-cart"></i>
+            <div class="card-body">
+                <p class="card-text">Titulo-Produto</p>
+                <span class="price">R$05,99</span>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+    <script src="../scripts/produto.js"></script>
+    <script src="../scripts/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
