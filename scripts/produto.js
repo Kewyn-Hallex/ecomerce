@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Botão de busca de CEP
     document.querySelector('.botao-busca').addEventListener('click', function() {
         const cep = document.querySelector('.cep').value;
         
-        if (cep.length === 8) {
+        if (cep.length === 8) { // Validar se o CEP tem 8 dígitos
             consultarFrete(cep);
         } else {
             alert('Por favor, insira um CEP válido!');
@@ -10,16 +11,19 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     function consultarFrete(cep) {
+        // Consultar o CEP através de uma API externa (ViaCEP)
         axios.get(`https://viacep.com.br/ws/${cep}/json/`)
             .then(response => {
                 const endereco = response.data;
                 if (endereco.erro) {
                     alert('CEP não encontrado.');
                 } else {
+                    // Exibir o CEP, cidade, estado
                     document.getElementById('cep').textContent = endereco.cep;
                     document.getElementById('cidade').textContent = endereco.localidade;
                     document.getElementById('estado').textContent = endereco.uf;
 
+                    // Calcular o frete com base na cidade
                     let valorFrete = calcularFrete(endereco);
                     document.getElementById('frete').textContent = `R$${valorFrete.toFixed(2)}`;
                 }
@@ -30,26 +34,30 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     }
 
-    function calcularFrete(endereco) {ão
+    function calcularFrete(endereco) {
+        // Exemplo de cálculo simples: frete fixo baseado na região
         const cidade = endereco.localidade.toLowerCase();
         if (cidade === 'são paulo') {
             return 15.50;
         } else if (cidade === 'rio de janeiro') {
             return 18.75;
         } else {
-            return 25.00;
+            return 25.00; // Frete para outros locais
         }
     }
 
+    // Função para exibir mais informações
     const botaoMaisInf = document.querySelector('.maisInf');
     const detalhes = document.querySelectorAll('.infoCEP');
 
+    // Adiciona o evento de clique ao botão
     botaoMaisInf.addEventListener('click', () => {
         detalhes.forEach(detalhe => {
-
+            // Alterna a classe "visivel" em cada elemento
             detalhe.classList.toggle('visivel');
         });
 
+        // Alterna o ícone do botão entre direita e baixo
         const icone = botaoMaisInf.querySelector('i');
         if (icone.classList.contains('bi-chevron-right')) {
             icone.classList.replace('bi-chevron-right', 'bi-chevron-down');
@@ -58,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    // Adicionar ao carrinho
     document.querySelectorAll('.add-cart').forEach(function(button) {
         button.addEventListener('click', function(event) {
             event.stopPropagation();

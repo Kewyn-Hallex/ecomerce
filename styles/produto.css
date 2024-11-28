@@ -366,7 +366,8 @@ a {
 
 .infoCEP {
     display: none; /* Esconde os detalhes inicialmente */
-    margin-left: 20px;  
+    margin-left: 5px;  
+    margin-top: 20px;
 }
 
 .infoCEP.visivel {
